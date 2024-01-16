@@ -4,7 +4,9 @@ using UnityEngine;
 
 public interface ICircle
 {
+
     public StatType Type { get; set; }
-    public float Amount {get; set;}
+    public float Amount { get; set; }
     public float GetCalculatedAmount();
+    public void StartLifeCycle();
 }

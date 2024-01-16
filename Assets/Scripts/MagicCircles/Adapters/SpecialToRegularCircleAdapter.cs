@@ -17,10 +17,15 @@ public class SpecialToRegularCircleAdapter : ICircle
     public StatType Type { get; set; }
     public float Amount { get; set; }
 
-
+    
 
     public float GetCalculatedAmount()
     {
         return distanceBasedCircle.GetCalculatedAmountByPos(receiverPos);
+    }
+
+    public void StartLifeCycle()
+    {
+        distanceBasedCircle.StartLifeCycle();
     }
 }
