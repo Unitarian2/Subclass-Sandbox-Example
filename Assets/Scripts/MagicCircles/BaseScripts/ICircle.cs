@@ -9,4 +9,5 @@ public interface ICircle
     public float Amount { get; set; }
     public float GetCalculatedAmount();
     public void StartLifeCycle();
+    public GameObject GetGameObject();
 }

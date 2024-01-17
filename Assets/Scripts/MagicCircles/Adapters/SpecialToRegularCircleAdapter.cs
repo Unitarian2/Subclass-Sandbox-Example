@@ -24,8 +24,13 @@ public class SpecialToRegularCircleAdapter : ICircle
         return distanceBasedCircle.GetCalculatedAmountByPos(receiverPos);
     }
 
+    public GameObject GetGameObject()
+    {
+        return distanceBasedCircle.GetGameObject();
+    }
+
     public void StartLifeCycle()
     {
-        distanceBasedCircle.StartLifeCycle();
+        distanceBasedCircle.StartLifeCycle(this);
     }
 }

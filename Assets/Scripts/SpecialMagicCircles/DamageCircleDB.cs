@@ -20,10 +20,15 @@ public class DamageCircleDB : MonoBehaviour, IDistanceBasedCircle
         return Mathf.Lerp(1f, Amount, lerpMod) * -1;
     }
 
-    public void StartLifeCycle()
+    public GameObject GetGameObject()
+    {
+        return gameObject;
+    }
+
+    public void StartLifeCycle(ICircle circle)
     {
         CircleLifeCycle circleBehaviour = new DamageCircleLifeCycle();
-        StartCoroutine(circleBehaviour.Activate());
+        StartCoroutine(circleBehaviour.Activate(circle));
     }
     private void Start()
     {

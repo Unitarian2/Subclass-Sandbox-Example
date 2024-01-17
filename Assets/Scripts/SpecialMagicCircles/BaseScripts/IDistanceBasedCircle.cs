@@ -8,5 +8,6 @@ public interface IDistanceBasedCircle
     public StatType Type { get; set; }
     public float Amount { get; set; }
     public float GetCalculatedAmountByPos(Vector3 receiverPos);
-    public void StartLifeCycle();
+    public void StartLifeCycle(ICircle circle);
+    public GameObject GetGameObject();
 }

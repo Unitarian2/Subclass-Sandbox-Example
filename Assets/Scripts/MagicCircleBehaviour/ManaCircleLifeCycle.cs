@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class ManaCircleLifeCycle : CircleLifeCycle
 {
-    public override IEnumerator Activate()
+    public override ICircle CircleRef { get; set; }
+
+    public override IEnumerator Activate(ICircle circleRef)
     {
+        this.CircleRef = circleRef;
         SpawnUp();
         yield return new WaitForSeconds(15);
         Shrink();

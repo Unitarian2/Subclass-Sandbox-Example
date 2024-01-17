@@ -14,10 +14,15 @@ public class DamageCircle : MonoBehaviour, ICircle
         return Amount * -1;
     }
 
+    public GameObject GetGameObject()
+    {
+        return gameObject;
+    }
+
     public void StartLifeCycle()
     {
         CircleLifeCycle circleBehaviour = new DamageCircleLifeCycle();
-        StartCoroutine(circleBehaviour.Activate());
+        StartCoroutine(circleBehaviour.Activate(this));
     }
 
     private void Start()

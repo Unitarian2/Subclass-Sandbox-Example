@@ -15,10 +15,15 @@ public class ManaCircle : MonoBehaviour, ICircle
         return Amount;
     }
 
+    public GameObject GetGameObject()
+    {
+        return gameObject;
+    }
+
     public void StartLifeCycle()
     {
         CircleLifeCycle circleBehaviour = new ManaCircleLifeCycle();
-        StartCoroutine(circleBehaviour.Activate());
+        StartCoroutine(circleBehaviour.Activate(this));
     }
 
     private void Start()

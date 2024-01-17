@@ -6391,6 +6391,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed6ddd43acc614447b87aaf3b895007a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  circleToGet:
+  - {fileID: 53930952837527464, guid: a81c54cb11ef2e2419d2e113403bfed4, type: 3}
+  - {fileID: 2604663031377313462, guid: 401a381a2585fe244aa6558f91ef79c3, type: 3}
+  - {fileID: 2518627935349367964, guid: b495385418b3a5d4c8a3b1cf2a5024e6, type: 3}
   circleParent: {fileID: 1824120368}
 --- !u!114 &1289977041
 MonoBehaviour:
@@ -6406,7 +6410,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   circlePrefab: {fileID: 53930952837527464, guid: a81c54cb11ef2e2419d2e113403bfed4,
     type: 3}
-  magicCircleFactory: {fileID: 0}
 --- !u!1001 &1293158909
 PrefabInstance:
   m_ObjectHideFlags: 0

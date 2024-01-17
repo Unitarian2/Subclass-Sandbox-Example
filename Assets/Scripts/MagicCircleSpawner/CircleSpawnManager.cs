@@ -6,12 +6,13 @@ using UnityEngine;
 public class CircleSpawnManager : MonoBehaviour
 {
     [SerializeField] GameObject circlePrefab;
-    [SerializeField] MagicCircleFactory magicCircleFactory;
+    MagicCircleFactory magicCircleFactory;
     
     void Start()
     {
         magicCircleFactory = GetComponent<MagicCircleFactory>();
         StartCoroutine(StartCircleSpawnProcess());
+        
     }
 
     private IEnumerator StartCircleSpawnProcess()
@@ -22,7 +23,7 @@ public class CircleSpawnManager : MonoBehaviour
 
     void SpawnSingleMagicCircle(Vector3 spawnPos)
     {
-        ICircle spawnedCircle = magicCircleFactory.GetMagicCircle(circlePrefab, spawnPos);
+        ICircle spawnedCircle = magicCircleFactory.GetMagicCircle(spawnPos);
         spawnedCircle.StartLifeCycle();
         StartCoroutine(StartCircleSpawnProcess());
     }

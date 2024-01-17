@@ -4,13 +4,16 @@ using UnityEngine;
 
 public abstract class CircleLifeCycle 
 {
-    
+   
 
-    public abstract IEnumerator Activate();//Subclass kendi versiyonunu tanýmlamalý
+    public abstract IEnumerator Activate(ICircle circleRef);//Subclass kendi versiyonunu tanýmlamalý
+
+    public abstract ICircle CircleRef { get; set; }
 
     protected void SpawnUp()
     {
         Debug.Log("Circle Spawn Up");
+        CircleRef.GetGameObject();
     }
 
     protected void Shrink()
