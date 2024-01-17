@@ -17,7 +17,10 @@ public class SpecialToRegularCircleAdapter : ICircle
     public StatType Type { get; set; }
     public float Amount { get; set; }
 
-    
+    public void Despawn()
+    {
+        distanceBasedCircle.Despawn();
+    }
 
     public float GetCalculatedAmount()
     {

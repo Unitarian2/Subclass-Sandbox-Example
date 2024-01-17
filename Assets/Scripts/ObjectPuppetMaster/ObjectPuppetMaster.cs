@@ -1,18 +1,35 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ObjectPuppetMaster : MonoBehaviour
+public class ObjectPuppetMaster : Singleton<ObjectPuppetMaster>
 {
-    // Start is called before the first frame update
-    void Start()
+    public IEnumerator ScaleTo(GameObject obj, Vector3 finalScale, float duration, Action onComplete)
     {
-        
+        float timeElapsed = 0f;
+        Vector3 initialScale = obj.transform.localScale;
+
+        while (timeElapsed < duration)
+        {
+            obj.transform.localScale = Vector3.Lerp(initialScale, finalScale, timeElapsed / duration);
+            timeElapsed += Time.deltaTime;
+            yield return null;
+        }
+
+        onComplete?.Invoke();
+    }
+    public IEnumerator ScaleTo(GameObject obj, Vector3 finalScale, float duration)
+    {
+        float timeElapsed = 0f;
+        Vector3 initialScale = obj.transform.localScale;
+
+        while (timeElapsed < duration)
+        {
+            obj.transform.localScale = Vector3.Lerp(initialScale, finalScale, timeElapsed / duration);
+            timeElapsed += Time.deltaTime;
+            yield return null;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

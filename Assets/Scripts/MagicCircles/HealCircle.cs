@@ -8,9 +8,11 @@ public class HealCircle : MonoBehaviour, ICircle
     
     public float Amount { get; set; }
     public StatType Type { get; set; }
-    
 
-    
+    public void Despawn()
+    {
+        Destroy(gameObject.transform.parent.gameObject);
+    }
 
     public float GetCalculatedAmount()
     {
@@ -25,6 +27,7 @@ public class HealCircle : MonoBehaviour, ICircle
     public void StartLifeCycle()
     {
         CircleLifeCycle circleBehaviour = new HealCircleLifeCycle();
+        
         StartCoroutine(circleBehaviour.Activate(this));
     }
 

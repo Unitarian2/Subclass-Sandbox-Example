@@ -17,6 +17,8 @@ public class MagicCircleFactory : MonoBehaviour
         return circle;
     }
 
+    
+
     GameObject GetRandomGameObject()
     {
         int index = Random.Range(0, circleToGet.Count);

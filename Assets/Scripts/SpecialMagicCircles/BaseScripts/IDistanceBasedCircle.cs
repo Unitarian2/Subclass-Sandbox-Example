@@ -10,4 +10,5 @@ public interface IDistanceBasedCircle
     public float GetCalculatedAmountByPos(Vector3 receiverPos);
     public void StartLifeCycle(ICircle circle);
     public GameObject GetGameObject();
+    public void Despawn();
 }

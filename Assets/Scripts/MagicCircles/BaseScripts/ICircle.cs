@@ -10,4 +10,6 @@ public interface ICircle
     public float GetCalculatedAmount();
     public void StartLifeCycle();
     public GameObject GetGameObject();
+    public void Despawn();
+
 }

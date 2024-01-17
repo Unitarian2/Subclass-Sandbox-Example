@@ -24,6 +24,7 @@ public class CircleSpawnManager : MonoBehaviour
     void SpawnSingleMagicCircle(Vector3 spawnPos)
     {
         ICircle spawnedCircle = magicCircleFactory.GetMagicCircle(spawnPos);
+        spawnedCircle.GetGameObject().transform.parent.gameObject.SetActive(true);
         spawnedCircle.StartLifeCycle();
         StartCoroutine(StartCircleSpawnProcess());
     }
