@@ -15,11 +15,12 @@ public abstract class CircleLifeCycle
 
     protected void Shrink()
     {
+        Debug.Log("Circle Shrink");
         Despawn();
     }
 
     protected void Despawn()
     {
-
+        Debug.Log("Circle Despawn");
     }
 }
