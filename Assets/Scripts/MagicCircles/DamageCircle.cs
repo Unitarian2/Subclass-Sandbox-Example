@@ -5,12 +5,9 @@ using UnityEngine;
 public class DamageCircle : MonoBehaviour, ICircle
 {
     private int damageAmount;
- 
 
     public float Amount { get; set; }
     public StatType Type { get; set; }
-
-    
 
     public float GetCalculatedAmount()
     {
