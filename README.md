@@ -16,3 +16,8 @@ DamageCircleLifeCycle.cs => DamageCircle'ın yaşam sürecinin logic'i buradadı
 HealCircleLifeCycle.cs => HealCircle'ın yaşam sürecinin logic'i buradadır. Activate metodu çağırıldığında yaşam süreci başlar.<br>
 ManaCircleLifeCycle.cs => ManaCircle'ın yaşam sürecinin logic'i buradadır. Activate metodu çağırıldığında yaşam süreci başlar.<br><br>
 
+CircleSpawnManager.cs => 10 saniyede bir rastgele bir Magic Circle Spawn eder. Spawn işlemini MagicCircleFactory class'ını kullanarak yapar.<br>
+MagicCircleFactory.cs => ICircle tipinde bir MagicCircle Spawn eder ve döndürür.<br><br>
+
+
+
