@@ -8,6 +8,11 @@ Bu repo, daha önce geliştirilmiş olan FPS prototipinin 4.Versiyonudur(v4). Bu
 Diğer sınıfların açıklamaları için :<br>
 v3 => https://github.com/Unitarian2/PickupableItemFactoryWithFlyweightPattern<br>
 v2 => https://github.com/Unitarian2/BasicAdapterExample<br>
-v1 => https://github.com/Unitarian2/ObserverPattern-MVP-Based-User-Interface
+v1 => https://github.com/Unitarian2/ObserverPattern-MVP-Based-User-Interface<br><br>
 
+
+CircleLifeCycle.cs => Magic Circle'ların davranışlarını içeren base class. Bu class bazı ortak metodlar içerirken, her subclass'ın kendi versiyonunu implemente etmesini gerektiren abstract metodlar da içermektedir. Burada hedef, her magic circle'ın Shrink, SpawnUp ve Despawn metodlarını kendi versiyonlarında ve farklı şekilde kullanarak kendi tiplerine özgü bir yaşam süreci geçirmeleridir. <br>
+DamageCircleLifeCycle.cs => DamageCircle'ın yaşam sürecinin logic'i buradadır. Activate metodu çağırıldığında yaşam süreci başlar.<br>
+HealCircleLifeCycle.cs => HealCircle'ın yaşam sürecinin logic'i buradadır. Activate metodu çağırıldığında yaşam süreci başlar.<br>
+ManaCircleLifeCycle.cs => ManaCircle'ın yaşam sürecinin logic'i buradadır. Activate metodu çağırıldığında yaşam süreci başlar.<br><br>
 
